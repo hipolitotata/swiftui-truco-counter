@@ -19,28 +19,47 @@ struct CounterView: View {
                 maxWidth: .infinity,
                 maxHeight: 100,
                 alignment: .center)
-            Spacer()
             VStack{
                 Text("\(count)").foregroundColor(Color.white).font(.system(size: 60)).bold()
             }.frame(
                 maxWidth: .infinity,
-                maxHeight: 400,
-                alignment: .top)
+                maxHeight: 150,
+                alignment: .center)
                 .onTapGesture {
                     self.addCount()
             }
+            HStack{
+                Button(action: {
+                    self.truco()
+                }) {Text("+3 PONTOS").bold()}
+            }.frame(
+                maxWidth: 120,
+                maxHeight: 70,
+                alignment: .center).background(Color("Green")).foregroundColor(Color.white).padding(.vertical, 30)
             
+            HStack{
+                Button(action: {
+                    self.addCount()
+                }) {Text("+1 PONTO").bold()}
+            }.frame(
+                maxWidth: 120,
+                maxHeight: 40,
+                alignment: .center).background(Color("Blue")).foregroundColor(Color.white).padding(.vertical, 15)
+            
+            HStack{
+                Button(action: {
+                    self.removeCount()
+                }) {Text("-1 PONTO").bold()}
+            }.frame(
+                maxWidth: 120,
+                maxHeight: 40,
+                alignment: .center).background(Color("Red")).foregroundColor(Color.white).padding(.vertical, 15)
+
         }.frame(minWidth: 0,
                 maxWidth: .infinity / 2,
                 minHeight: 0,
                 maxHeight: .infinity,
                 alignment: .topLeading)
-            .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
-                .onEnded({ value in
-                    self.gestureDetected(value: value)
-                    
-                }))
-        
     }
     
     private func gestureDetected(value: DragGesture.Value){
@@ -55,14 +74,28 @@ struct CounterView: View {
     }
     
     private func truco(){
+        if(self.count >= 12){
+            return;
+        }
+        
+        if(self.count == 10 || self.count == 11){
+            return self.count = 12
+        }
+        
         self.count = self.count + 3
     }
     
     private func addCount(){
+        if(self.count >= 12){
+            return;
+        }
         self.count = self.count + 1
     }
     
     private func removeCount(){
+        if(self.count == 0){
+            return;
+        }
         self.count = self.count - 1
     }
 }
