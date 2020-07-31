@@ -10,7 +10,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        HStack{
+            HStack {
+                CounterView(label: .constant("Nós"))
+                Divider().background(Color.white)
+                CounterView(label: .constant("Eles"))
+            }.background(Color("Black"))
+        }.cornerRadius(20).padding(20).background(Color("Brown"))
+        
     }
 }
 

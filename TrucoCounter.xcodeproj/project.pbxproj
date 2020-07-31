@@ -13,6 +13,7 @@
 		7A0E801324D38B270007B8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E801224D38B270007B8E9 /* Assets.xcassets */; };
 		7A0E801624D38B270007B8E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E801524D38B270007B8E9 /* Preview Assets.xcassets */; };
 		7A0E801924D38B270007B8E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0E801724D38B270007B8E9 /* LaunchScreen.storyboard */; };
+		7A15BED624D38DF400941C60 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A15BED524D38DF400941C60 /* CounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7A0E801524D38B270007B8E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A0E801824D38B270007B8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A0E801A24D38B270007B8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A15BED524D38DF400941C60 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		7A0E800B24D38B250007B8E9 /* TrucoCounter */ = {
 			isa = PBXGroup;
 			children = (
+				7A15BED424D38DC300941C60 /* View */,
 				7A0E800C24D38B250007B8E9 /* AppDelegate.swift */,
 				7A0E800E24D38B250007B8E9 /* SceneDelegate.swift */,
 				7A0E801024D38B250007B8E9 /* ContentView.swift */,
@@ -73,6 +76,14 @@
 				7A0E801524D38B270007B8E9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7A15BED424D38DC300941C60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7A15BED524D38DF400941C60 /* CounterView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +160,7 @@
 				7A0E800D24D38B250007B8E9 /* AppDelegate.swift in Sources */,
 				7A0E800F24D38B250007B8E9 /* SceneDelegate.swift in Sources */,
 				7A0E801124D38B250007B8E9 /* ContentView.swift in Sources */,
+				7A15BED624D38DF400941C60 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
