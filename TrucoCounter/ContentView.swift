@@ -12,9 +12,9 @@ struct ContentView: View {
     var body: some View {
         HStack{
             HStack {
-                CounterView(label: .constant("Nós"))
+                CounterView(label: .constant("Our points"))
                 Divider().background(Color.white)
-                CounterView(label: .constant("Eles"))
+                CounterView(label: .constant("Your points"))
             }.background(Color("Black"))
         }.cornerRadius(20).padding(20).background(Color("Brown"))
         

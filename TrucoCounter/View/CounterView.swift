@@ -15,12 +15,12 @@ struct CounterView: View {
     
     var body: some View {  
         VStack{
-            Text(label).foregroundColor(Color.white).font(.system(size: 35)).frame(
+            Text(label).foregroundColor(Color.white).font(.system(size: 20)).frame(
                 maxWidth: .infinity,
                 maxHeight: 100,
                 alignment: .center)
             VStack{
-                Text("\(count)").foregroundColor(Color.white).font(.system(size: 60)).bold()
+                Text("\(count)").foregroundColor(Color.white).font(.system(size: 30)).bold()
             }.frame(
                 maxWidth: .infinity,
                 maxHeight: 150,
@@ -31,7 +31,7 @@ struct CounterView: View {
             HStack{
                 Button(action: {
                     self.truco()
-                }) {Text("+3 PONTOS").bold()}
+                }) {Text("+3 Points").bold()}
             }.frame(
                 maxWidth: 120,
                 maxHeight: 70,
@@ -40,7 +40,7 @@ struct CounterView: View {
             HStack{
                 Button(action: {
                     self.addCount()
-                }) {Text("+1 PONTO").bold()}
+                }) {Text("+1 Points").bold()}
             }.frame(
                 maxWidth: 120,
                 maxHeight: 40,
@@ -49,7 +49,7 @@ struct CounterView: View {
             HStack{
                 Button(action: {
                     self.removeCount()
-                }) {Text("-1 PONTO").bold()}
+                }) {Text("-1 Points").bold()}
             }.frame(
                 maxWidth: 120,
                 maxHeight: 40,
